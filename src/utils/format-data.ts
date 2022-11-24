@@ -20,7 +20,9 @@ const formatData = (data: CsvData): DataCoverage => {
   versions.forEach(([version, usage], index) => {
     const key = isNaN(version) ? "Other" : String(version);
 
-    const coverage = versions.slice(0, index + 1).reduce((acc, [, usage]) => twoDecimalsNumber(acc + usage), 0);
+    const coverage = versions
+      .slice(0, index + 1)
+      .reduce((acc, [, usageByVersion]) => twoDecimalsNumber(acc + usageByVersion), 0);
 
     results[key] = {
       version,

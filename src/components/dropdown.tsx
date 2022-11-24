@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 import React, { useState } from "react";
 import { createStyles, Group, Menu, UnstyledButton } from "@mantine/core";
 

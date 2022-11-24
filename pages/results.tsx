@@ -1,7 +1,5 @@
 import Head from "next/head";
 import { Container, Table } from "@mantine/core";
-import CHeader from "../src/components/header";
-import CForm from "../src/components/form";
 import parseCsv from "../src/utils/parse-csv";
 import formatData, { DataCoverage } from "../src/utils/format-data";
 
@@ -60,17 +58,12 @@ export async function getServerSideProps(context: {
       `https://gs.statcounter.com/${os}-version-market-share/mobile-tablet/chart.php?device=Mobile%20%26%20Tablet&device_hidden=mobile%2Btablet&multi-device=true&statType_hidden=${os}_version&region_hidden=eu&granularity=monthly&statType=${os}%20Version&region=Europe&fromInt=202110&toInt=202210&fromMonthYear=2021-10&toMonthYear=2022-10&csv=1`,
     );
 
-    console.debug("date", date);
-    console.debug("dateInt", dateInt);
-
     url.searchParams.set("region_hidden", regionShort);
     url.searchParams.set("region", region);
     // url.searchParams.set("fromMonthYear", date);
     url.searchParams.set("toMonthYear", date);
     // url.searchParams.set("fromInt", dateInt);
     url.searchParams.set("toInt", dateInt);
-
-    console.debug("url", String(url));
 
     const res = await fetch(String(url));
     const dataRaw = await res.text();
