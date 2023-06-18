@@ -87,3 +87,7 @@ export async function getServerSideProps(context: {
 }
 
 // http://localhost:3001/results?os=ios&region=Europe&regionShort=eu&month=10&year=2022
+
+// https://gs.statcounter.com/vendor-market-share/mobile/chart.php?device=Mobile&device_hidden=mobile&statType_hidden=vendor&region_hidden=AE&granularity=monthly&statType=Device%20Vendor&region=United%20Arab%20Emirates&fromInt=202110&toInt=202211&fromMonthYear=2021-10&toMonthYear=2022-11&csv=1
+// https://gs.statcounter.com/vendor-market-share/mobile/chart.php?device=Mobile&device_hidden=mobile&statType_hidden=vendor&region_hidden=as&granularity=monthly&statType=Device%20Vendor&region=Asia&fromInt=202110&toInt=202211&fromMonthYear=2021-10&toMonthYear=2022-11&csv=1
+// https://gs.statcounter.com/vendor-market-share/mobile/chart.php?device=Mobile&device_hidden=mobile&statType_hidden=vendor&region_hidden=ww&granularity=monthly&statType=Device%20Vendor&region=Worldwide&fromInt=202110&toInt=202211&fromMonthYear=2021-10&toMonthYear=2022-11&csv=1
